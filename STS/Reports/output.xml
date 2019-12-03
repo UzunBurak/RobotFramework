@@ -1,46 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20191203 13:12:54.758" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<robot rpa="false" generated="20191203 13:40:49.221" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
 <suite source="/Users/burakuzun/robot/RobotFramework/STS/Tests/login.robot" id="s1" name="Login">
 <test id="s1-t1" name="Registreer link href">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<msg timestamp="20191203 13:40:49.377" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1025eab90&gt;</msg>
+<status status="PASS" endtime="20191203 13:40:49.377" starttime="20191203 13:40:49.376"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+</arguments>
+<status status="PASS" endtime="20191203 13:40:49.378" starttime="20191203 13:40:49.377"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" endtime="20191203 13:40:49.378" starttime="20191203 13:40:49.378"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20191203 13:40:49.379" level="INFO">${options} = {'goog:chromeOptions': {'args': [u'headless', u'disable-gpu'], 'extensions': []}, 'platform': 'ANY', 'browserName': 'chrome', 'version': ''}</msg>
+<status status="PASS" endtime="20191203 13:40:49.379" starttime="20191203 13:40:49.378"></status>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>https://sts-dev.slmndr.be</arg>
-<arg>headlesschrome</arg>
+<arg>browser=chrome</arg>
+<arg>desired_capabilities=${options}</arg>
 </arguments>
-<msg timestamp="20191203 13:12:54.916" level="INFO">Opening browser 'headlesschrome' to base url 'https://sts-dev.slmndr.be'.</msg>
-<status status="PASS" endtime="20191203 13:12:58.400" starttime="20191203 13:12:54.916"></status>
+<msg timestamp="20191203 13:40:49.379" level="INFO">Opening browser 'chrome' to base url 'https://sts-dev.slmndr.be'.</msg>
+<status status="PASS" endtime="20191203 13:40:52.540" starttime="20191203 13:40:49.379"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191203 13:40:52.657" starttime="20191203 13:40:52.541"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//a[@href="/register"]</arg>
 </arguments>
-<status status="PASS" endtime="20191203 13:12:58.435" starttime="20191203 13:12:58.401"></status>
+<status status="PASS" endtime="20191203 13:40:52.687" starttime="20191203 13:40:52.657"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//*[contains(text(), 'Registreer')]</arg>
 </arguments>
-<msg timestamp="20191203 13:12:58.436" level="INFO">Clicking element '//*[contains(text(), 'Registreer')]'.</msg>
-<status status="PASS" endtime="20191203 13:12:58.529" starttime="20191203 13:12:58.436"></status>
+<msg timestamp="20191203 13:40:52.687" level="INFO">Clicking element '//*[contains(text(), 'Registreer')]'.</msg>
+<status status="PASS" endtime="20191203 13:40:52.778" starttime="20191203 13:40:52.687"></status>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current URL is exactly ``url``.</doc>
 <arguments>
 <arg>https://sts-dev.slmndr.be/register</arg>
 </arguments>
-<msg timestamp="20191203 13:12:58.586" level="INFO">Current location is 'https://sts-dev.slmndr.be/register'.</msg>
-<status status="PASS" endtime="20191203 13:12:58.586" starttime="20191203 13:12:58.530"></status>
+<msg timestamp="20191203 13:40:52.823" level="INFO">Current location is 'https://sts-dev.slmndr.be/register'.</msg>
+<status status="PASS" endtime="20191203 13:40:52.823" starttime="20191203 13:40:52.778"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20191203 13:12:58.660" starttime="20191203 13:12:58.587"></status>
+<status status="PASS" endtime="20191203 13:40:52.901" starttime="20191203 13:40:52.824"></status>
 </kw>
-<status status="PASS" endtime="20191203 13:12:58.660" critical="yes" starttime="20191203 13:12:54.915"></status>
+<status status="PASS" endtime="20191203 13:40:52.901" critical="yes" starttime="20191203 13:40:49.376"></status>
 </test>
-<status status="PASS" endtime="20191203 13:12:58.661" starttime="20191203 13:12:54.761"></status>
+<status status="PASS" endtime="20191203 13:40:52.903" starttime="20191203 13:40:49.224"></status>
 </suite>
 <statistics>
 <total>
