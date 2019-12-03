@@ -1,93 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20191203 10:35:35.308" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<robot rpa="false" generated="20191203 13:12:54.758" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
 <suite source="/Users/burakuzun/robot/RobotFramework/STS/Tests/login.robot" id="s1" name="Login">
-<test id="s1-t1" name="Wachtwoord vergeten link href">
-<kw type="for" name="${browser} IN [ @{BROWSERS} ]">
-<kw type="foritem" name="${browser} = chrome">
-<kw name="START ${browser} AND MAXIMIZE" library="Resources">
+<test id="s1-t1" name="Registreer link href">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>https://sts-dev.slmndr.be</arg>
+<arg>headlesschrome</arg>
 </arguments>
-<msg timestamp="20191203 10:35:35.481" level="INFO">Opening browser 'chrome' to base url 'https://sts-dev.slmndr.be'.</msg>
-<status status="PASS" endtime="20191203 10:35:40.108" starttime="20191203 10:35:35.481"></status>
+<msg timestamp="20191203 13:12:54.916" level="INFO">Opening browser 'headlesschrome' to base url 'https://sts-dev.slmndr.be'.</msg>
+<status status="PASS" endtime="20191203 13:12:58.400" starttime="20191203 13:12:54.916"></status>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20191203 10:35:40.268" starttime="20191203 10:35:40.108"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20191203 10:35:43.271" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20191203 10:35:43.271" starttime="20191203 10:35:40.268"></status>
-</kw>
-<status status="PASS" endtime="20191203 10:35:43.271" starttime="20191203 10:35:35.480"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//a[@href="/register"]</arg>
 </arguments>
-<msg timestamp="20191203 10:35:43.271" level="INFO">Clicking link 'xpath=//a[@href="/register"]'.</msg>
-<status status="PASS" endtime="20191203 10:35:43.420" starttime="20191203 10:35:43.271"></status>
+<status status="PASS" endtime="20191203 13:12:58.435" starttime="20191203 13:12:58.401"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>//*[contains(text(), 'Registreer')]</arg>
 </arguments>
-<msg timestamp="20191203 10:35:48.423" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20191203 10:35:48.423" starttime="20191203 10:35:43.421"></status>
+<msg timestamp="20191203 13:12:58.436" level="INFO">Clicking element '//*[contains(text(), 'Registreer')]'.</msg>
+<status status="PASS" endtime="20191203 13:12:58.529" starttime="20191203 13:12:58.436"></status>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current URL is exactly ``url``.</doc>
 <arguments>
 <arg>https://sts-dev.slmndr.be/register</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20191203 10:35:48.435" level="FAIL">WebDriverException: Message: chrome not reachable
-  (Session info: chrome=78.0.3904.108)
-</msg>
-<status status="FAIL" endtime="20191203 10:35:48.435" starttime="20191203 10:35:48.429"></status>
+<msg timestamp="20191203 13:12:58.586" level="INFO">Current location is 'https://sts-dev.slmndr.be/register'.</msg>
+<status status="PASS" endtime="20191203 13:12:58.586" starttime="20191203 13:12:58.530"></status>
 </kw>
-<msg timestamp="20191203 10:35:48.435" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
-  (Session info: chrome=78.0.3904.108)
-</msg>
-<msg timestamp="20191203 10:35:48.436" level="FAIL">WebDriverException: Message: chrome not reachable
-  (Session info: chrome=78.0.3904.108)
-</msg>
-<status status="FAIL" endtime="20191203 10:35:48.436" starttime="20191203 10:35:48.423"></status>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191203 13:12:58.660" starttime="20191203 13:12:58.587"></status>
 </kw>
-<status status="FAIL" endtime="20191203 10:35:48.436" starttime="20191203 10:35:35.480"></status>
-</kw>
-<status status="FAIL" endtime="20191203 10:35:48.436" starttime="20191203 10:35:35.480"></status>
-</kw>
-<status status="FAIL" endtime="20191203 10:35:48.436" critical="yes" starttime="20191203 10:35:35.479">WebDriverException: Message: chrome not reachable
-  (Session info: chrome=78.0.3904.108)
-</status>
+<status status="PASS" endtime="20191203 13:12:58.660" critical="yes" starttime="20191203 13:12:54.915"></status>
 </test>
-<status status="FAIL" endtime="20191203 10:35:48.438" starttime="20191203 10:35:35.310"></status>
+<status status="PASS" endtime="20191203 13:12:58.661" starttime="20191203 13:12:54.761"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Login" pass="0">Login</stat>
+<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20191203 10:35:48.435" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
-  (Session info: chrome=78.0.3904.108)
-</msg>
 </errors>
 </robot>

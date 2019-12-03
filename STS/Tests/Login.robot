@@ -6,21 +6,20 @@ Resource            ../Resources/Resources.robot
 @{BROWSERS}     chrome      firefox        safari
 
 *** Test Cases ***
-Wachtwoord vergeten link href
-    :FOR  ${browser}  IN   @{BROWSERS}
-    \    START ${browser} AND MAXIMIZE
-    \    CLICK LINK                  xpath=//a[@href="/register"]
-    \    SLEEP  5
-    \    LOCATION SHOULD BE          https://sts-dev.slmndr.be/register
-    \    close browser
-
-#Registreer link href
+#Wachtwoord vergeten link href
 #    :FOR  ${browser}  IN   @{BROWSERS}
-#        \   START ${BROWSER} AND MAXIMIZE
-#        \   CLICK LINK                  xpath=//a[@href="/register"]
-#        \   LOCATION SHOULD BE          https://sts-dev.slmndr.be/register
-#        \   close browser
+#    \       START ${browser} AND MAXIMIZE
+#    \       WAIT UNTIL ELEMENT IS VISIBLE       //*[contains(text(), 'Vergeten')]
+#    \       CLICK LINK                          //*[contains(text(), 'Vergeten')]
+#    \       WAIT UNTIL LOCATION IS              https://sts-dev.slmndr.be/password/forgot
+#    \       LOCATION SHOULD BE                  https://sts-dev.slmndr.be/password/forgot
+#    \       close browser 
 
-#    \    CLICK ELEMENT               //*[contains(text(), 'Vergeten')]
-#    \    SLEEP 2
-#    \    LOCATION SHOULD BE          https://sts-dev.slmndr.be/password/forgot
+Registreer link href
+    
+    Open Browser      https://sts-dev.slmndr.be    headlesschrome
+    
+    WAIT UNTIL ELEMENT IS VISIBLE   xpath=//a[@href="/register"]
+    CLICK ELEMENT                    //*[contains(text(), 'Registreer')]
+    LOCATION SHOULD BE              https://sts-dev.slmndr.be/register
+    close browser
