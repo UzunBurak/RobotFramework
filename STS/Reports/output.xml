@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191202 15:07:04.348" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/burakuzun/robot/STS/Tests/Login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Wachtwoord vergeten link href">
+<kw type="for" name="${browser} IN [ @{BROWSERS} ]">
+<kw type="foritem" name="${browser} = chrome">
+<kw name="START ${browser} AND MAXIMIZE" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191202 15:07:04.527" level="INFO">Opening browser 'chrome' to base url 'https://sts-dev.slmndr.be'.</msg>
+<status status="PASS" endtime="20191202 15:07:09.096" starttime="20191202 15:07:04.526"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191202 15:07:09.275" starttime="20191202 15:07:09.097"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191202 15:07:12.276" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191202 15:07:12.276" starttime="20191202 15:07:09.275"></status>
+</kw>
+<status status="PASS" endtime="20191202 15:07:12.276" starttime="20191202 15:07:04.525"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@href="/register"]</arg>
+</arguments>
+<msg timestamp="20191202 15:07:12.277" level="INFO">Clicking link 'xpath=//a[@href="/register"]'.</msg>
+<status status="PASS" endtime="20191202 15:07:12.481" starttime="20191202 15:07:12.277"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191202 15:07:17.483" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191202 15:07:17.483" starttime="20191202 15:07:12.482"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://sts-dev.slmndr.be/register</arg>
+</arguments>
+<msg timestamp="20191202 15:07:17.490" level="INFO">Current location is 'https://sts-dev.slmndr.be/register'.</msg>
+<status status="PASS" endtime="20191202 15:07:17.491" starttime="20191202 15:07:17.484"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191202 15:07:17.621" starttime="20191202 15:07:17.491"></status>
+</kw>
+<status status="PASS" endtime="20191202 15:07:17.621" starttime="20191202 15:07:04.525"></status>
+</kw>
+<kw type="foritem" name="${browser} = firefox">
+<kw name="START ${browser} AND MAXIMIZE" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191202 15:07:17.622" level="INFO">Opening browser 'firefox' to base url 'https://sts-dev.slmndr.be'.</msg>
+<msg timestamp="20191202 15:07:17.628" level="INFO">Firefox driver log is always forced to to: /Users/burakuzun/robot/STS/Reports/geckodriver-11.log</msg>
+<status status="PASS" endtime="20191202 15:07:24.260" starttime="20191202 15:07:17.622"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191202 15:07:24.265" starttime="20191202 15:07:24.261"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191202 15:07:27.267" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191202 15:07:27.267" starttime="20191202 15:07:24.266"></status>
+</kw>
+<status status="PASS" endtime="20191202 15:07:27.268" starttime="20191202 15:07:17.621"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@href="/register"]</arg>
+</arguments>
+<msg timestamp="20191202 15:07:27.268" level="INFO">Clicking link 'xpath=//a[@href="/register"]'.</msg>
+<status status="PASS" endtime="20191202 15:07:27.543" starttime="20191202 15:07:27.268"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191202 15:07:32.544" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191202 15:07:32.545" starttime="20191202 15:07:27.543"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://sts-dev.slmndr.be/register</arg>
+</arguments>
+<msg timestamp="20191202 15:07:32.549" level="INFO">Current location is 'https://sts-dev.slmndr.be/register'.</msg>
+<status status="PASS" endtime="20191202 15:07:32.549" starttime="20191202 15:07:32.545"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191202 15:07:34.182" starttime="20191202 15:07:32.550"></status>
+</kw>
+<status status="PASS" endtime="20191202 15:07:34.182" starttime="20191202 15:07:17.621"></status>
+</kw>
+<kw type="foritem" name="${browser} = safari">
+<kw name="START ${browser} AND MAXIMIZE" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191202 15:07:34.183" level="INFO">Opening browser 'safari' to base url 'https://sts-dev.slmndr.be'.</msg>
+<status status="PASS" endtime="20191202 15:07:36.570" starttime="20191202 15:07:34.183"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191202 15:07:36.763" starttime="20191202 15:07:36.571"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191202 15:07:39.766" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191202 15:07:39.766" starttime="20191202 15:07:36.764"></status>
+</kw>
+<status status="PASS" endtime="20191202 15:07:39.767" starttime="20191202 15:07:34.183"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@href="/register"]</arg>
+</arguments>
+<msg timestamp="20191202 15:07:39.767" level="INFO">Clicking link 'xpath=//a[@href="/register"]'.</msg>
+<status status="PASS" endtime="20191202 15:07:39.803" starttime="20191202 15:07:39.767"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191202 15:07:44.803" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191202 15:07:44.804" starttime="20191202 15:07:39.803"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://sts-dev.slmndr.be/register</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191202 15:07:45.177" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191202 15:07:45.177" starttime="20191202 15:07:44.808"></status>
+</kw>
+<msg timestamp="20191202 15:07:45.179" level="FAIL">Location should have been 'https://sts-dev.slmndr.be/register' but was 'https://sts-dev.slmndr.be/'.</msg>
+<status status="FAIL" endtime="20191202 15:07:45.180" starttime="20191202 15:07:44.804"></status>
+</kw>
+<status status="FAIL" endtime="20191202 15:07:45.180" starttime="20191202 15:07:34.182"></status>
+</kw>
+<status status="FAIL" endtime="20191202 15:07:45.180" starttime="20191202 15:07:04.525"></status>
+</kw>
+<status status="FAIL" endtime="20191202 15:07:45.181" critical="yes" starttime="20191202 15:07:04.524">Location should have been 'https://sts-dev.slmndr.be/register' but was 'https://sts-dev.slmndr.be/'.</status>
+</test>
+<status status="FAIL" endtime="20191202 15:07:45.183" starttime="20191202 15:07:04.350"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Login" pass="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

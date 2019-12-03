@@ -1,0 +1,8 @@
+1575290121623	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/yy/5f61drnd6616g54v2rpmqg4h0000gn/T/rust_mozprofileuPoa9e"
+1575290122905	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575290122906	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575290122906	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575290122907	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1575290126569	Marionette	INFO	Listening on port 51751
+1575290126668	Marionette	WARN	TLS certificate errors will be ignored for this session
+1575290130165	Marionette	INFO	Stopped listening on port 51751
