@@ -1,112 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20191203 14:05:33.781" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<robot rpa="false" generated="20191203 14:20:12.774" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
 <suite source="/Users/burakuzun/robot/RobotFramework/STS/Tests/login.robot" id="s1" name="Login">
 <test id="s1-t1" name="Registreer link href">
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-</arguments>
-<assign>
-<var>${chrome_options}</var>
-</assign>
-<msg timestamp="20191203 14:05:33.939" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x101c2abd0&gt;</msg>
-<status status="PASS" endtime="20191203 14:05:33.939" starttime="20191203 14:05:33.938"></status>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<arguments>
-<arg>${chrome_options}</arg>
-<arg>add_argument</arg>
-<arg>headless</arg>
-</arguments>
-<status status="PASS" endtime="20191203 14:05:33.940" starttime="20191203 14:05:33.939"></status>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<arguments>
-<arg>${chrome_options}</arg>
-<arg>add_argument</arg>
-<arg>disable-gpu</arg>
-</arguments>
-<status status="PASS" endtime="20191203 14:05:33.940" starttime="20191203 14:05:33.940"></status>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<arguments>
-<arg>${chrome_options}</arg>
-<arg>add_argument</arg>
-<arg>dump-down</arg>
-</arguments>
-<status status="PASS" endtime="20191203 14:05:33.941" starttime="20191203 14:05:33.940"></status>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<arguments>
-<arg>${chrome_options}</arg>
-<arg>to_capabilities</arg>
-</arguments>
-<assign>
-<var>${options}</var>
-</assign>
-<msg timestamp="20191203 14:05:33.941" level="INFO">${options} = {'goog:chromeOptions': {'args': [u'headless', u'disable-gpu', u'dump-down'], 'extensions': []}, 'platform': 'ANY', 'browserName': 'chrome', 'version': ''}</msg>
-<status status="PASS" endtime="20191203 14:05:33.941" starttime="20191203 14:05:33.941"></status>
-</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>https://sts-dev.slmndr.be</arg>
-<arg>browser=chrome</arg>
-<arg>desired_capabilities=${options}</arg>
+<arg>headlesschrome</arg>
 </arguments>
-<msg timestamp="20191203 14:05:33.942" level="INFO">Opening browser 'chrome' to base url 'https://sts-dev.slmndr.be'.</msg>
-<status status="PASS" endtime="20191203 14:05:37.196" starttime="20191203 14:05:33.941"></status>
+<msg timestamp="20191203 14:20:12.964" level="INFO">Opening browser 'headlesschrome' to base url 'https://sts-dev.slmndr.be'.</msg>
+<status status="PASS" endtime="20191203 14:20:16.344" starttime="20191203 14:20:12.963"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20191203 14:05:37.307" starttime="20191203 14:05:37.196"></status>
+<status status="PASS" endtime="20191203 14:20:16.452" starttime="20191203 14:20:16.345"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//a[@href="/register"]</arg>
 </arguments>
-<status status="PASS" endtime="20191203 14:05:37.339" starttime="20191203 14:05:37.307"></status>
+<status status="PASS" endtime="20191203 14:20:16.480" starttime="20191203 14:20:16.453"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>//*[contains(text(), 'Registreer')]</arg>
+<arg>//*[contains(text(), 'Registrer')]</arg>
 </arguments>
-<msg timestamp="20191203 14:05:37.340" level="INFO">Clicking element '//*[contains(text(), 'Registreer')]'.</msg>
-<status status="PASS" endtime="20191203 14:05:37.437" starttime="20191203 14:05:37.340"></status>
+<msg timestamp="20191203 14:20:16.481" level="INFO">Clicking element '//*[contains(text(), 'Registrer')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191203 14:20:17.059" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191203 14:20:17.059" starttime="20191203 14:20:16.501"></status>
 </kw>
-<kw name="Location Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<arguments>
-<arg>https://sts-dev.slmndr.be/register</arg>
-</arguments>
-<msg timestamp="20191203 14:05:37.493" level="INFO">Current location is 'https://sts-dev.slmndr.be/register'.</msg>
-<status status="PASS" endtime="20191203 14:05:37.493" starttime="20191203 14:05:37.438"></status>
+<msg timestamp="20191203 14:20:17.060" level="FAIL">Element with locator '//*[contains(text(), 'Registrer')]' not found.</msg>
+<status status="FAIL" endtime="20191203 14:20:17.060" starttime="20191203 14:20:16.480"></status>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20191203 14:05:37.568" starttime="20191203 14:05:37.493"></status>
-</kw>
-<status status="PASS" endtime="20191203 14:05:37.568" critical="yes" starttime="20191203 14:05:33.938"></status>
+<status status="FAIL" endtime="20191203 14:20:17.061" critical="yes" starttime="20191203 14:20:12.962">Element with locator '//*[contains(text(), 'Registrer')]' not found.</status>
 </test>
-<status status="PASS" endtime="20191203 14:05:37.571" starttime="20191203 14:05:33.784"></status>
+<status status="FAIL" endtime="20191203 14:20:17.061" starttime="20191203 14:20:12.776"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
+<stat fail="1" id="s1" name="Login" pass="0">Login</stat>
 </suite>
 </statistics>
 <errors>
