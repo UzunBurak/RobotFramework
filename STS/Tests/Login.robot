@@ -27,7 +27,7 @@ Registreer link href
 
     #Open Browser    https://sts-dev.slmndr.be    browser=chrome        desired_capabilities=${options}
 
-    Open Browser      https://sts-dev.slmndr.be    chrome
+    Open Browser      https://sts-dev.slmndr.be    headlesschrome
     Maximize Browser Window
 
 
